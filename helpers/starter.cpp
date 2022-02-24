@@ -14,6 +14,7 @@
 #define inf 1000000000000000001;
 #define all(x) begin(x), end(x)
 #define sz(x) (ll)(x).size()
+using namespace std;
 typedef long long ll;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
@@ -26,7 +27,6 @@ void err(istream_iterator<string> it, T a, Args... args) {
 	cerr << *it << " = " << a << endl;
 	err(++it, args...);
 }
-using namespace std;
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

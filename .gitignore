@@ -1,4 +1,7 @@
-.*
+.cph
+.idea
+.vscode
+cmake-build-debug
 *
 !/**/
 !*.*
