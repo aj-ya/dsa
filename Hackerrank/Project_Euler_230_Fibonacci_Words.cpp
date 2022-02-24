@@ -58,33 +58,47 @@ void coutvec(vll& a){
     }
     cout<<"\n";
 }
-void perm(vi& a){
-    do{
-    bool flag=false;
-    for(int i=1;i<a.size();i++){
-         if(a[i]%(i+1)==0){cout<<"No\n";flag=true;break;}
-    if(flag==true){cout<<"No\n";}  
-    else {
-        cout<<"Yes";
-        coutvec(a);
-        break;
+
+char finDig(vll& arr,uint64 n,uint64 i,string& a,string & b){
+    if(i==0 && n<=a.length()){return a[n-1];}
+    if(i==1 && n<=b.length()){return b[n-1];}
+    char result;
+    if(n<=arr[i-2]){
+        result=finDig(arr,n,i-2,a,b);
     }
+    else{
+        result=finDig(arr,(n-arr[i-2]),i-1,a,b);
     }
-    }while(next_permutation(a.begin(),a.end()));
+    return result;
 }
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cin.exceptions(cin.failbit);
-    unsigned int t;
+    //cin.exceptions(cin.failbit);
+    uint64 t,n,al,bl;
     cin>>t;
+    string a,b;
     while(t--){
-        int32 n;
-        cin>>n;
-        vi a(n);
-        for(int i=0;i<n;i++)
-            a[i]=i+1;
-        perm(a);
+        cin>>a>>b>>n;
+        //error(a,b,n);
+        //do something
+        al=a.length();
+        bl=b.length();
+        //error(al,bl);
+        vll fiblen;
+        uint64 temp,i=2;
+        fiblen.eb(al);
+        if(n<fiblen[0]){cout<<a[n-1]<<endl;continue;}
+        fiblen.eb(bl);
+        if(n<fiblen[1]){cout<<b[n-1]<<endl;continue;}
+        while(n>fiblen[i-1]){
+            fiblen.eb(fiblen[i-1]+fiblen[i-2]);
+            i++;
+        }
+        i--;     
+        cout<<finDig(fiblen,n,i,a,b)<<endl;
+        //coutvec(fiblen);
     }
     return 0;
 }

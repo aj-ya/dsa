@@ -1,6 +1,18 @@
 {
     "files.associations": {
         "ostream": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "tuple": "cpp",
+        "deque": "cpp",
+        "vector": "cpp",
+        "random": "cpp",
+        "iostream": "cpp",
+        "hash_map": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "string_view": "cpp",
+        "hash_set": "cpp",
+        "ranges": "cpp"
     }
 }

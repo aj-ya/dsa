@@ -1,0 +1,3 @@
+/home/sh4n1/dsa/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/sh4n1/dsa/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/sh4n1/dsa/cmake-build-debug/CMakeFiles/dsa.dir
