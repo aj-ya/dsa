@@ -13,6 +13,14 @@
         "unordered_set": "cpp",
         "string_view": "cpp",
         "hash_set": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "initializer_list": "cpp",
+        "valarray": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "slist": "cpp",
+        "span": "cpp",
+        "regex": "cpp",
+        "utility": "cpp"
     }
 }
