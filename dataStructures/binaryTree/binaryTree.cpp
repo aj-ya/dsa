@@ -7,9 +7,9 @@ class Node{
     Node * left;
     Node * right;
     Node(int val ){
-        data=val;
-        left=nullptr;
-        right=nullptr;
+        this->data=val;
+        this->left=nullptr;
+        this->right=nullptr;
     }
 };
 Node* insertBST(Node * root,int data){
